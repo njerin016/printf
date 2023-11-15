@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			c = va_arg(lists, int);
+			c = selector(format, args, c);
 			format++;
 		}
 		else
